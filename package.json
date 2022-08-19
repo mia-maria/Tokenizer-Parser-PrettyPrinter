@@ -1,0 +1,50 @@
+{
+  "name": "parser",
+  "version": "1.0.0",
+  "description": "1DV610 - L2 - Parser",
+  "type": "module",
+  "browser": "js/index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "lint": "npx eslint ./src || exit 0",
+    "lint:fix": "npx eslint ./src --fix || exit 0",
+    "test": "npx mocha --recursive || exit 0"
+  },
+  "contributors": [
+    "Mia-Maria Galistel <mg223tj@student.lnu.se>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/eslint-parser": "^7.15.8",
+    "@lnu/eslint-config": "^1.1.4",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsdoc": "^36.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "snowpack": "2.11.1"
+  },
+  "eslintConfig": {
+    "extends": "@lnu"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1"
+  },
+  "snowpack": {
+    "scripts": {
+      "run:info": "echo Press Ctrl+C to terminate"
+    },
+    "mount": {
+      "public": "/",
+      "src": "/js"
+    },
+    "devOptions": {
+      "bundle": false
+    }
+  }
+}
